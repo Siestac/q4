@@ -1,3 +1,5 @@
 #!/bin/bash
 mkdir -p ~/.jupyter
-cp -r .jupyter/* ~/.jupyter/
+for file in .jupyter/*; do
+    cp -n "$file" ~/.jupyter/
+done
